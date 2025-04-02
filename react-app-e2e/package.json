@@ -1,0 +1,10 @@
+{
+  "name": "@your-workspace-name/react-app-e2e",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "implicitDependencies": [
+      "@your-workspace-name/react-app"
+    ]
+  }
+}
