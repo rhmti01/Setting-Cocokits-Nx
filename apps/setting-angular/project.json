@@ -1,0 +1,87 @@
+{
+  "name": "setting-angular",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "app",
+  "sourceRoot": "apps/setting-angular/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:application",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/setting-angular",
+        "index": "apps/setting-angular/src/index.html",
+        "browser": "apps/setting-angular/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/setting-angular/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          {
+            "glob": "**/*",
+            "input": "apps/setting-angular/public"
+          }
+        ],
+        "styles": ["apps/setting-angular/src/styles.scss"],
+        "scripts": [],
+        "server": "apps/setting-angular/src/main.server.ts",
+        "ssr": {
+          "entry": "apps/setting-angular/src/server.ts"
+        },
+        "outputMode": "server"
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "4kb",
+              "maximumError": "8kb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "optimization": false,
+          "extractLicenses": false,
+          "sourceMap": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "setting-angular:build:production"
+        },
+        "development": {
+          "buildTarget": "setting-angular:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "buildTarget": "setting-angular:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "setting-angular:build",
+        "staticFilePath": "dist/apps/setting-angular/browser",
+        "spa": true
+      }
+    }
+  }
+}
