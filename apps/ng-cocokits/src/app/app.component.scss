@@ -1,0 +1,8 @@
+@use "@cocokits/theme-frames-x/tokens" as Tokens;
+
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: Tokens.$spacing-10;
+}
