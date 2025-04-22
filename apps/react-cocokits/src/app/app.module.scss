@@ -1,1 +1,23 @@
 /* Your styles goes here. */
+
+@use "@cocokits/theme-frames-x/tokens.min.css";
+@use "@cocokits/theme-frames-x/styles.min.css";
+
+@use "@cocokits/theme-frames-x/tokens"as Tokens;
+
+@import 'https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap';
+
+@import '../scss/reset';
+@import '../scss/_mixins';
+
+.app-host {
+  background-color: Tokens.$colors-alpha-light-50;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}

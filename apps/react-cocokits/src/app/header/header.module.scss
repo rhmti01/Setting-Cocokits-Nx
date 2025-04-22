@@ -1,0 +1,136 @@
+/* Your styles goes here. */
+
+@use "@cocokits/theme-frames-x/tokens.min.css";
+@use "@cocokits/theme-frames-x/styles.min.css";
+
+@use "@cocokits/theme-frames-x/tokens"as Tokens;
+
+@import 'https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap';
+
+@import '../../scss/reset';
+@import '../../scss/_mixins';
+
+.header {
+  //   background-color: Tokens.$colors-blue-100;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #E1E1E2;
+}
+
+@include media(M) {
+  .header {
+    height: 66px;
+    padding: 0 Tokens.$spacing-8;
+  }
+
+  .search_btn {
+    display: block;
+    width: 44px;
+    height: 36px;
+    border: 1px solid #E1E1E2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: Tokens.$radi-6;
+    -webkit-border-radius: Tokens.$radi-6;
+    -moz-border-radius: Tokens.$radi-6;
+    -ms-border-radius: Tokens.$radi-6;
+    -o-border-radius: Tokens.$radi-6;
+  }
+
+  .search {
+    display: none;
+  }
+
+  .menu {
+    gap: Tokens.$spacing-6;
+  }
+
+  .menu_icon {
+    display: flex;
+  }
+
+  .nav_links{
+    display: none;
+  }
+}
+
+@include media(T) {
+  .header {
+    height: 68px;
+    padding: 0 Tokens.$spacing-12 0 Tokens.$spacing-8;
+  }
+
+  .search_btn {
+    display: none;
+  }
+
+  .menu {
+    gap: Tokens.$spacing-6;
+  }
+
+  .search {
+    width: 221px;
+    height: 44px;
+  }
+
+  .search_input::placeholder {
+    color: Tokens.$text-dark-secondary;
+    font-weight: Tokens.$font-weight-medium;
+  }
+
+  .nav_links{
+    display: none;
+  }
+}
+
+@include media(D) {
+  .header {
+    max-width: 1440px;
+    height: 68px;
+    padding: 0 Tokens.$spacing-12 0 Tokens.$spacing-10;
+  }
+
+  .search {
+    width: 221px;
+    height: 44px;
+  }
+
+  .search_btn {
+    display: none;
+  }
+
+  .menu_icon {
+    display: none;
+  }
+
+  .nav_links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 444px;
+    height: 44px;
+    margin-left: Tokens.$spacing-10;
+  }
+
+  .nav_links li a {
+    display: flex;
+    align-items: center;
+    gap: Tokens.$spacing-5;
+    font: Tokens.$text-base-font-medium;
+    color: Tokens.$text-dark-secondary;
+    font-size: Tokens.$font-size-base;
+  }
+
+  .nav_links li a svg {
+    margin-top: Tokens.$spacing-2;
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}

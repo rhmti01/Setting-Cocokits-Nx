@@ -1,0 +1,25 @@
+@mixin textStyle($size, $weight, $color) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin media($size) {
+  @if ($size==M) {
+    @media (min-width:325px) and (max-width: 460px) {
+      @content;
+    }
+  }
+
+  @else if ($size==T) {
+    @media (min-width:460px) and (max-width:960px) {
+      @content;
+    }
+  }
+
+  @else if($size==D) {
+    @media (min-width:960px) {
+      @content;
+    }
+  }
+}
