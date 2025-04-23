@@ -1,12 +1,16 @@
 @use "@cocokits/theme-frames-x/tokens" as Tokens;
 
-:host {
-  display: flex;
-  flex-direction: column;
-  align-items: baseline;
-  gap: Tokens.$spacing-10;
-}
+@import '../scss/mixins';
 
-.title{
-  padding-bottom: Tokens.$spacing-20;
+.app-host {
+  background-color: Tokens.$colors-alpha-light-50;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
 }

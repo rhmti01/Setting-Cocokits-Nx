@@ -1,0 +1,47 @@
+<nav class='header'>
+  <!-- menu   -->
+  <div class='menu'>
+    <button cck-icon-button type="default" size="md" type="secondary">
+      <cck-svg-icon [icon]="Icons.dollar"></cck-svg-icon>
+    </button>
+    <button class='menu_icon' cck-icon-button type="default" size="md" type="secondary">
+      <cck-svg-icon [icon]="Icons.info"></cck-svg-icon>
+    </button>
+    <ul class='nav_links'>
+      <li>
+        <a href="#">
+          Home
+          <cck-svg-icon [icon]="Icons.arrowHeadDown" size="lg"></cck-svg-icon>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          Products
+          <cck-svg-icon [icon]="Icons.arrowHeadDown" size="lg"></cck-svg-icon>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          Pricing
+          <cck-svg-icon [icon]="Icons.arrowHeadDown" size="lg"></cck-svg-icon>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          Contact
+          <cck-svg-icon [icon]="Icons.arrowHeadDown" size="lg"></cck-svg-icon>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- search  -->
+  <button cck-icon-button class='search_btn' type="secondary" size="md">
+    <cck-svg-icon [icon]="Icons.search" />
+  </button>
+  <cck-form-field class='search' >
+    <input cck-input placeholder="Search ..." />
+    <cck-prefix>
+      <cck-svg-icon [size]="'xl'" [icon]="Icons.search"></cck-svg-icon>
+    </cck-prefix>
+  </cck-form-field>
+</nav>

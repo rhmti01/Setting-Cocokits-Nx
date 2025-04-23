@@ -5,6 +5,8 @@ import {
   FormField,
   Input,
   IconButton,
+  Prefix,
+  Suffix,
 } from '@cocokits/react-components';
 
 export function Header() {
@@ -60,13 +62,13 @@ export function Header() {
         <SvgIcon icon={Icons.search} />
       </IconButton>
       <FormField className={styles['search']}>
-        <SvgIcon className={styles['search_icon']} icon={Icons.search} />
-        <Input
-          className={styles['search-input']}
-          type="search"
-          placeholder="Search..."
-          size="Medium"
-        />
+        <Input  placeholder="Search ..." />
+        <Prefix>
+          <SvgIcon
+            size="xl"
+            icon={Icons.search}
+          ></SvgIcon>
+        </Prefix>
       </FormField>
     </nav>
   );

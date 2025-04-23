@@ -1,17 +1,10 @@
-/* Your styles goes here. */
-
-@use "@cocokits/theme-frames-x/tokens.min.css";
-@use "@cocokits/theme-frames-x/styles.min.css";
-
 @use "@cocokits/theme-frames-x/tokens"as Tokens;
 
-@import 'https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap';
-
-@import '../../scss/reset';
+@import '../../scss/_reset';
 @import '../../scss/_mixins';
 
 .header {
-  width: 100%;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -51,7 +44,7 @@
     display: flex;
   }
 
-  .nav_links{
+  .nav_links {
     display: none;
   }
 }
@@ -80,13 +73,14 @@
     font-weight: Tokens.$font-weight-medium;
   }
 
-  .nav_links{
+  .nav_links {
     display: none;
   }
 }
 
 @include media(D) {
   .header {
+    // width: 100%;
     max-width: 1440px;
     height: 68px;
     padding: 0 Tokens.$spacing-12 0 Tokens.$spacing-10;
@@ -105,7 +99,7 @@
     display: none;
   }
 
-  .nav_links{
+  .nav_links {
     display: flex;
     justify-content: space-between;
     align-items: center;

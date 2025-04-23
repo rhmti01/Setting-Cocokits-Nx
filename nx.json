@@ -64,6 +64,9 @@
         "style": "scss",
         "linter": "eslint"
       }
+    },
+    "@nx/angular:component": {
+      "style": "css"
     }
   },
   "plugins": [
